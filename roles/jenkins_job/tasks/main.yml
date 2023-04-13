@@ -10,3 +10,7 @@
     url: http://172.31.7.96:8080
     user: admin
     password: "{{jenkins_password}}"
+  loop:
+    - frontend
+    - cart
+    - catalogue
