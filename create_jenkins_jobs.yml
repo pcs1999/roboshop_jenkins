@@ -2,4 +2,4 @@
   hosts: all
   connection: local
   roles:
-    - jenkins_jobs
+    - jenkins_job
