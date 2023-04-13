@@ -1,5 +1,5 @@
 - name: Create a jenkins job using basic authentication
-  hosts: local
+  hosts: all
   connection: local
   roles:
     - jenkins_jobs
