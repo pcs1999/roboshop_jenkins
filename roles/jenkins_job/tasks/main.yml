@@ -5,17 +5,12 @@
     url: http://172.31.7.96:8080
     user: admin
     password: "{{jenkins_password}}"
-  loop:
-    - CIpipeline
+  loop: "{{ folder }}"
+
 
 
 - name: create pipe line job
   ansible.builtin.include_tasks:
     file: pipeline.yml
-  loop:
-    - {name: "frontend" , dir: "CIpipeline"}
-    - {name: "cart" , dir: "CIpipeline"}
-    - {name: "catalogue" , dir: "CIpipeline"}
-    - {name: "user" , dir: "CIpipeline"}
-    - {name: "payment" , dir: "CIpipeline"}
-    - {name: "shipping" , dir: "CIpipeline"}
+  loop: "{{ pipelinejobs }}"
+
