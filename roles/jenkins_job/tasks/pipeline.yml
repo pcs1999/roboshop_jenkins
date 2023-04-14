@@ -14,11 +14,11 @@
 - name: Create Config file
   ansible.builtin.template:
     src: job.xml
-    dest: /tmp/job.xml
+    dest: /tmp/job-"{{item.name}}".xml
 
 - name: Create
   community.general.jenkins_job:
-    config: "{{ lookup('file', '/tmp/job.xml') }}"
+    config: "{{ lookup('file', '/tmp/job-"{{item.name}}".xml') }}"
     name: "{{item.dir}}/{{item.name}}"
     url: http://172.31.7.96:8080
     user: admin
