@@ -27,8 +27,8 @@
         <data>
             <jenkins.branch.BranchSource>
                 <source class="jenkins.plugins.git.GitSCMSource" plugin="git">
-                    <id>${component}</id>
-                    <remote>https://github.com/pcs1999/${component}.git</remote>
+                    <id>{{unique_key}}</id>
+                    <remote>https://github.com/pcs1999/{{component}}.git</remote>
                     <credentialsId></credentialsId>
                     <traits>
                         <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
