@@ -2,7 +2,7 @@
 - name: Create Config file
   ansible.builtin.template:
     src: m-job.xml
-    dest: /tmp/job.xml
+    dest: /tmp/m-job.xml
 
 - name: Create - "{{dir}}/{{component}}"
   community.general.jenkins_job:
