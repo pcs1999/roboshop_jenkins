@@ -10,7 +10,7 @@
 
 - name: create pipe line job
   ansible.builtin.include_tasks:
-    file: pipeline.yml
+    file: m-branch-pipeline.yml
   vars:
     component: "{{item.name}}"
     dir: "{{item.dir}}"
