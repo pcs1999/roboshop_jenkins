@@ -1,4 +1,4 @@
-pipelinejobs:
+ci_pipeline_jobs:
   - { name: "frontend" , dir: "CIpipeline" }
   - { name: "cart" , dir: "CIpipeline" }
   - { name: "catalogue" , dir: "CIpipeline" }

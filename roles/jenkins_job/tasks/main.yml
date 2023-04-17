@@ -14,5 +14,5 @@
   vars:
     component: "{{item.name}}"
     dir: "{{item.dir}}"
-  loop: "{{ pipelinejobs }}"
+  loop: "{{ ci_pipeline_jobs }}"
 
