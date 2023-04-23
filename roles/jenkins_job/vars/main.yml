@@ -11,6 +11,6 @@ folder:
   - infra
 
 s_ci_pipeline_jobs:
-  - { name: "roboshop-infra" , dir: "infra" }
+  - { name: "robo-infra" , dir: "infra" }
 
 
