@@ -1,5 +1,5 @@
 - name: Checking existing - "{{dir}}/{{component}}"
-  ansible.builtin.shell: java -jar jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://jenkins.chandupcs.online:8080/ -webSocket get-job "{{dir}}/{{component}}"
+  ansible.builtin.shell: java -jar /opt/jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://jenkins.chandupcs.online:8080/ -webSocket get-job "{{dir}}/{{component}}"
   register: out
   ignore_errors: yes
 
@@ -16,7 +16,7 @@
 
 - name: Create - "{{dir}}/{{component}}"
   community.general.jenkins_job:
-    config: "{{ lookup('file', '/tmp/m-job.xml') }}"
+    config: "{{ lookup('file', 'templates/m-job.xml') }}"
     name: "{{dir}}/{{component}}"
     url: http://172.31.7.96:8080
     user: admin
