@@ -5,6 +5,7 @@
     user: admin
     password: "{{jenkins_password}}"
   register: out
+  ignore_errors: yes
 
 
 
