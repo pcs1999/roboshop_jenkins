@@ -1,4 +1,4 @@
-- name: Checking existing - "{{dir}}/{{component}}"
+- name: Checking existing - {{dir}}/{{component}}
   ansible.builtin.shell: java -jar /opt/jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://172.31.7.96:8080 -webSocket get-job {{dir}}/{{component}}
   register: out
   ignore_errors: yes
