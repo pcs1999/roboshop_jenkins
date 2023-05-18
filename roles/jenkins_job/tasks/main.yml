@@ -9,17 +9,15 @@
 
 
 - name: create m-pipe line job
-  ansible.builtin.include_tasks:
-    file: m-branch-pipeline.yml
-  vars:
-    component: "{{item.name}}"
-    dir: "{{item.dir}}"
+  ansible.builtin.include_tasks: m-branch-pipeline.yml
+#  vars:
+#    component: "{{item.name}}"
+#    dir: "{{item.dir}}"
   loop: "{{ ci_pipeline_jobs }}"
 
 - name: create s-pipe line job
-  ansible.builtin.include_tasks:
-    file: s-branch-pipeline.yml
-  vars:
-    component: "{{item.name}}"
-    dir: "{{item.dir}}"
+  ansible.builtin.include_tasks: s-branch-pipeline.yml
+#  vars:
+#    component: "{{item.name}}"
+#    dir: "{{item.dir}}"
   loop: "{{ s_ci_pipeline_jobs }}"

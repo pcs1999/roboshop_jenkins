@@ -1,11 +1,11 @@
-- name: Checking existing - {{dir}}/{{component}}
-  ansible.builtin.shell: java -jar /opt/jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://172.31.7.96:8080 -webSocket get-job {{dir}}/{{component}}
+- name: Checking existing - {{item.dir}}/{{item.name}}
+  ansible.builtin.shell: java -jar /opt/jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://172.31.7.96:8080 -webSocket get-job {{item.dir}}/{{item.name}}
   register: out
   ignore_errors: yes
 
 
 
-- name: Create Config file
+- name: Create Config file -  "{{item.dir}}/{{item.name}}"
   ansible.builtin.template:
     src: m-job.xml
     dest: /tmp/m-job.xml
@@ -14,10 +14,10 @@
   when: out.rc == 3
 
 
-- name: Create - "{{dir}}/{{component}}"
+- name: Create - "{{item.dir}}/{{item.name}}"
   community.general.jenkins_job:
     config: "{{ lookup('file', '/tmp/m-job.xml') }}"
-    name: "{{dir}}/{{component}}"
+    name: "{{item.dir}}/{{item.name}}"
     url: http://172.31.7.96:8080
     user: admin
     password: "{{jenkins_password}}"
