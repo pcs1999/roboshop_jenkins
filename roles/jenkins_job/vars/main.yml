@@ -9,8 +9,10 @@ ci_pipeline_jobs:
 folder:
   - CIpipeline
   - infra
+  - Contineous_Deployment
 
 s_ci_pipeline_jobs:
   - { name: "robo-infra" , dir: "infra" }
+  - { name: "robo-ansible" , dir: "Contineous_Deployment" }
 
 
