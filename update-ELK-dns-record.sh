@@ -6,7 +6,7 @@ echo '
   "Changes": [{
     "Action": "CREATE",
     "ResourceRecordSet": {
-      "Name": "ELK.chandupcs.online",
+      "Name": "elk.chandupcs.online",
       "Type": "A",
       "TTL": 15,
       "ResourceRecords": [{ "Value": "IPADDRESS"}]
