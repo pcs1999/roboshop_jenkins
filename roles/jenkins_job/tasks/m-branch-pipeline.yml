@@ -1,5 +1,5 @@
 - name: Checking existing - {{item.dir}}/{{item.name}}
-  ansible.builtin.shell: java -jar /jenkins-cli/jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://172.31.10.175:8080 -webSocket get-job {{item.dir}}/{{item.name}}
+  ansible.builtin.shell: java -jar /opt/jenkins-cli.jar -auth admin:{{jenkins_password}} -s http://jenkins.chandupcs.online:8080:8080 -webSocket get-job {{item.dir}}/{{item.name}}
   register: out
   ignore_errors: yes
 
