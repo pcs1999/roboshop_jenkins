@@ -4,7 +4,7 @@ echo '
 {
   "Comment": "CREATE/DELETE/UPSERT a record ",
   "Changes": [{
-    "Action": "UPSERT",
+    "Action": "CREATE",
     "ResourceRecordSet": {
       "Name": "ELK.chandupcs.online",
       "Type": "A",
