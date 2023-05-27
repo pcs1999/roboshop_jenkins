@@ -13,6 +13,6 @@ folder:
 
 s_ci_pipeline_jobs:
   - { name: "robo-infra" , dir: "infra" }
-  - { name: "robo-ansible" , dir: "Contineous_Deployment" }
+  - { name: "roboshop-ansible" , dir: "Contineous_Deployment" }
 
 
