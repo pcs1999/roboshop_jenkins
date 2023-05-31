@@ -14,7 +14,7 @@ folder:
 s_ci_pipeline_jobs:
   - { name: "robo-infra" , dir: "infra" }
   - { name: "roboshop-ansible" , dir: "Contineous_Deployment" }
-  - { name: "roboshop-helm-chart" , dir: "Contineous_Deployment" }
+  - { name: "roboshop-helm-chart" , dir: "Contineous_Deployment"  }
 
 
 
